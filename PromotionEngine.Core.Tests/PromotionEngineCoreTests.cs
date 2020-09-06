@@ -5,7 +5,7 @@ namespace PromotionEngine.Core
     public class PromotionEngineCoreTests
     {
         [Fact]
-        public void ContainsPropertyTest()
+        public void ContainsPropertyItemsTest()
         {
             var cart = new ShoppingCart();
             var doesItemsExist = cart.GetType().GetProperty("Items") != null;

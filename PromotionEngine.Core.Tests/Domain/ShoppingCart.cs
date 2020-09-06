@@ -1,4 +1,5 @@
 ﻿using PromotionEngine.Core.Domain;
+using System;
 using System.Collections.Generic;
 
 namespace PromotionEngine.Core
@@ -9,6 +10,6 @@ namespace PromotionEngine.Core
         {
         }
 
-        public Dictionary<ProductEnum, int> Items { get; internal set; }
+        public List<Tuple<ProductEnum, int>> Items { get; internal set; }
     }
 }

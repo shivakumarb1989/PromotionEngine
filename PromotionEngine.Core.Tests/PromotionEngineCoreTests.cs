@@ -1,7 +1,7 @@
 using PromotionEngine.Core.ObjectMothers;
 using Xunit;
 
-namespace PromotionEngine.Core
+namespace PromotionEngine.Core.Tests
 {
     public class PromotionEngineCoreTests
     {
@@ -16,7 +16,7 @@ namespace PromotionEngine.Core
         [Fact]
         public void GetItemsTest()
         {
-            var cart = ShoppingCartMock.GetItems();
+            var cart = ShoppingCartOM.GetItems();
             Assert.NotNull(cart.Items);
         }
     }

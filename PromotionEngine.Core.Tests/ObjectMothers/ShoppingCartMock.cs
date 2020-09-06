@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PromotionEngine.Core.ObjectMothers
 {
-    public static class ShoppingCartMock
+    public static class ShoppingCartOM
     {
         public static ShoppingCart GetItems()
         {
@@ -18,6 +18,30 @@ namespace PromotionEngine.Core.ObjectMothers
                 }
             };
             return shoppingCart;
+        }
+
+        public static List<SKUQuantity> GetPromotion3AItems()
+        {
+            var items = new List<SKUQuantity> {
+                    new SKUQuantity { SKU = SKUEnum.A, Quantity = 5 },
+                    new SKUQuantity { SKU = SKUEnum.B, Quantity = 2 },
+                    new SKUQuantity { SKU = SKUEnum.C, Quantity = 6 },
+                    new SKUQuantity { SKU = SKUEnum.D, Quantity = 8 }
+                };
+
+            return items;
+        }
+
+        public static List<SKUQuantity> GetPromotion2BItems()
+        {
+            var items = new List<SKUQuantity> {
+                    new SKUQuantity { SKU = SKUEnum.A, Quantity = 5 },
+                    new SKUQuantity { SKU = SKUEnum.B, Quantity = 2 },
+                    new SKUQuantity { SKU = SKUEnum.C, Quantity = 6 },
+                    new SKUQuantity { SKU = SKUEnum.D, Quantity = 8 }
+                };
+
+            return items;
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using PromotionEngine.Core.Domain;
+using System;
+using System.Collections.Generic;
 
 namespace PromotionEngine.Core.Interface
 {
     public interface ICalculationReceiver
     {
-        void Process(List<Domain.SKUQuantity> unProcessedItems);
+        Tuple<List<SKUQuantity>, int> Process(List<SKUQuantity> unProcessedItems, int total);
     }
 }

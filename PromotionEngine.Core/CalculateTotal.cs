@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PromotionEngine.Core.Promotions
+namespace PromotionEngine.Core
 {
     public class CalculateTotal : ICalculationReceiver
     {

@@ -18,7 +18,9 @@ namespace PromotionEngine.Core.Promotions
             {
                 if (productC.Quantity == productD.Quantity)
                 {
-                    total += productC.Quantity * CoreConstants.PROMOTION_CD_PRICE;
+                    total += productD.Quantity * CoreConstants.PROMOTION_CD_PRICE;
+                    unProcessedItems.FirstOrDefault(a => a.SKU == SKUEnum.C).Quantity =
+                    unProcessedItems.FirstOrDefault(a => a.SKU == SKUEnum.D).Quantity = 0;
                 }
 
                 if (productC.Quantity > productD.Quantity)
@@ -30,7 +32,7 @@ namespace PromotionEngine.Core.Promotions
                 }
                 else
                 {
-                    total += productD.Quantity * CoreConstants.PROMOTION_CD_PRICE;
+                    total += productC.Quantity * CoreConstants.PROMOTION_CD_PRICE;
                     unProcessedItems.FirstOrDefault(a => a.SKU == SKUEnum.D).Quantity =
                         productD.Quantity - productC.Quantity;
                     unProcessedItems.FirstOrDefault(a => a.SKU == SKUEnum.C).Quantity = 0;

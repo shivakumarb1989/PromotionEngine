@@ -44,6 +44,40 @@ namespace PromotionEngine.Core.ObjectMothers
             return items;
         }
 
+        public static List<SKUQuantity> GetPromotionAllItems()
+        {
+            var items = new List<SKUQuantity> {
+                    new SKUQuantity { SKU = SKUEnum.A, Quantity = 5 },
+                    new SKUQuantity { SKU = SKUEnum.B, Quantity = 5 },
+                    new SKUQuantity { SKU = SKUEnum.C, Quantity = 1 },
+                };
+
+            return items;
+        }
+
+        public static List<SKUQuantity> GetPromotionAll1Items()
+        {
+            var items = new List<SKUQuantity> {
+                    new SKUQuantity { SKU = SKUEnum.A, Quantity = 1 },
+                    new SKUQuantity { SKU = SKUEnum.B, Quantity = 1 },
+                    new SKUQuantity { SKU = SKUEnum.C, Quantity = 1 },
+                };
+
+            return items;
+        }
+
+        public static List<SKUQuantity> GetPromotionAll2Items()
+        {
+            var items = new List<SKUQuantity> {
+                    new SKUQuantity { SKU = SKUEnum.A, Quantity = 3 },
+                    new SKUQuantity { SKU = SKUEnum.B, Quantity = 5 },
+                    new SKUQuantity { SKU = SKUEnum.C, Quantity = 1 },
+                    new SKUQuantity { SKU = SKUEnum.D, Quantity = 1 },
+                };
+
+            return items;
+        }
+
         public static List<SKUQuantity> GetPromotion_3A_2B_Items()
         {
             var items = new List<SKUQuantity> {

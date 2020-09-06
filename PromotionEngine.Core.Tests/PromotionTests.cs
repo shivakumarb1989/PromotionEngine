@@ -56,5 +56,36 @@ namespace PromotionEngine.Core
             var total = calculationHandler.Handle(items, calculationReceivers.ToList());
             Assert.Equal(175, total);
         }
+
+
+        [Fact]
+        public void Promotion_ALL_Returns_Total()
+        {
+            calculationHandler = new CalculationHandler();
+            calculationReceivers = new List<ICalculationReceiver> { new PromotionA(), new PromotionB(), new PromotionCD(), new CalculateTotal() };
+            var items = ShoppingCartOM.GetPromotionAllItems();
+            var total = calculationHandler.Handle(items, calculationReceivers.ToList());
+            Assert.Equal(370, total);
+        }
+
+        [Fact]
+        public void Promotion_ALL2_Returns_Total()
+        {
+            calculationHandler = new CalculationHandler();
+            calculationReceivers = new List<ICalculationReceiver> { new PromotionA(), new PromotionB(), new PromotionCD(), new CalculateTotal() };
+            var items = ShoppingCartOM.GetPromotionAll2Items();
+            var total = calculationHandler.Handle(items, calculationReceivers.ToList());
+            Assert.Equal(280, total);
+        }
+
+        [Fact]
+        public void Promotion_ALL1_Returns_Total()
+        {
+            calculationHandler = new CalculationHandler();
+            calculationReceivers = new List<ICalculationReceiver> { new PromotionA(), new PromotionB(), new PromotionCD(), new CalculateTotal() };
+            var items = ShoppingCartOM.GetPromotionAll1Items();
+            var total = calculationHandler.Handle(items, calculationReceivers.ToList());
+            Assert.Equal(100, total);
+        }
     }
 }

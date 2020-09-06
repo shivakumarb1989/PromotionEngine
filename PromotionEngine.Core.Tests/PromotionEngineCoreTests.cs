@@ -1,3 +1,4 @@
+using PromotionEngine.Core.ObjectMothers;
 using Xunit;
 
 namespace PromotionEngine.Core
@@ -10,6 +11,13 @@ namespace PromotionEngine.Core
             var cart = new ShoppingCart();
             var doesItemsExist = cart.GetType().GetProperty("Items") != null;
             Assert.True(doesItemsExist);
+        }
+
+        [Fact]
+        public void GetItemsTest()
+        {
+            var cart = ShoppingCartMock.GetItems();
+            Assert.NotNull(cart.Items);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace PromotionEngine.Core.ObjectMothers
                     new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.A, 5),
                     new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.B, 2),
                     new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.C, 6),
-                    new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.D, 8),
+                    new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.D, 8)
                 }                
             };
             return shoppingCart;

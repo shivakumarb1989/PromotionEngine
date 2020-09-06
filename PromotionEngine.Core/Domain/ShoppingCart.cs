@@ -6,10 +6,6 @@ namespace PromotionEngine.Core
 {
     public class ShoppingCart
     {
-        public ShoppingCart()
-        {
-        }
-
-        public List<Tuple<ProductEnum, int>> Items { get; internal set; }
+        public List<SKUQuantity> Items { get; set; }
     }
 }

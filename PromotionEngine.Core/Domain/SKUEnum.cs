@@ -1,6 +1,6 @@
 ﻿namespace PromotionEngine.Core.Domain
 {
-    public enum ProductEnum
+    public enum SKUEnum
     {
         A = 50,
         B = 30,

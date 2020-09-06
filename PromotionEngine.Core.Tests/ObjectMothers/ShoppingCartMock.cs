@@ -1,6 +1,5 @@
-﻿using System;
+﻿using PromotionEngine.Core.Domain;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PromotionEngine.Core.ObjectMothers
 {
@@ -11,12 +10,12 @@ namespace PromotionEngine.Core.ObjectMothers
 
             var shoppingCart = new ShoppingCart
             {
-                Items = new List<Tuple<Domain.ProductEnum, int>> { 
-                    new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.A, 5),
-                    new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.B, 2),
-                    new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.C, 6),
-                    new Tuple<Domain.ProductEnum, int> (Domain.ProductEnum.D, 8)
-                }                
+                Items = new List<SKUQuantity> {
+                    new SKUQuantity { SKU = SKUEnum.A, Quantity = 5 },
+                    new SKUQuantity { SKU = SKUEnum.B, Quantity = 2 },
+                    new SKUQuantity { SKU = SKUEnum.C, Quantity = 6 },
+                    new SKUQuantity { SKU = SKUEnum.D, Quantity = 8 }
+                }
             };
             return shoppingCart;
         }

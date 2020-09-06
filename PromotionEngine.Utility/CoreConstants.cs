@@ -7,5 +7,7 @@
 
         public const int PROMOTION_2B_PRICE = 45;
         public const int PROMOTION_2B_UNITS = 2;
+
+        public const int PROMOTION_CD_PRICE = 30;
     }
 }

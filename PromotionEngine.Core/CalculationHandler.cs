@@ -13,7 +13,7 @@ namespace PromotionEngine.Core
 
         private int Total { get; set; }
 
-        public int CalculateTotal(List<SKUQuantity> items, List<ICalculationReceiver> receivers)
+        public int Handle(List<SKUQuantity> items, List<ICalculationReceiver> receivers)
         {
             UnProcessedItems = items;
             foreach (var calculation in receivers)

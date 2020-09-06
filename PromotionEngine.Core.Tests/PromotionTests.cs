@@ -43,7 +43,7 @@ namespace PromotionEngine.Core
             calculationHandler = new CalculationHandler();
             calculationReceivers = new List<ICalculationReceiver> { new PromotionA(), new PromotionB() };
             var items = ShoppingCartOM.GetPromotion2BItems();
-            var total = calculationHandler.CalculateTotal(items, calculationReceivers.ToList());
+            var total = calculationHandler.Handle(items, calculationReceivers.ToList());
             Assert.Equal(175, total);
         }
 
@@ -53,7 +53,7 @@ namespace PromotionEngine.Core
             calculationHandler = new CalculationHandler();
             calculationReceivers = new List<ICalculationReceiver> { new PromotionA(), new PromotionB(), new CalculateTotal() };
             var items = ShoppingCartOM.GetPromotion2BItems();
-            var total = calculationHandler.CalculateTotal(items, calculationReceivers.ToList());
+            var total = calculationHandler.Handle(items, calculationReceivers.ToList());
             Assert.Equal(175, total);
         }
     }

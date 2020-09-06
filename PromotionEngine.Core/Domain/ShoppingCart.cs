@@ -7,5 +7,7 @@ namespace PromotionEngine.Core
     public class ShoppingCart
     {
         public List<SKUQuantity> Items { get; set; }
+
+        protected int Total { get; set; }
     }
 }

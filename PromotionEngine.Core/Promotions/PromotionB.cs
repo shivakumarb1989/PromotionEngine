@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PromotionEngine.Core.Promotions
 {
-    public class PromotionB : IReceiver
+    public class PromotionB : ICalculationReceiver
     {
         public void Process()
         {

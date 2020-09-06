@@ -1,6 +1,6 @@
 ﻿namespace PromotionEngine.Core.Interface
 {
-    public interface IReceiver
+    public interface ICalculationReceiver
     {
         void Process();
     }

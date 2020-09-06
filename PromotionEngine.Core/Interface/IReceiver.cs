@@ -1,7 +1,9 @@
-﻿namespace PromotionEngine.Core.Interface
+﻿using System.Collections.Generic;
+
+namespace PromotionEngine.Core.Interface
 {
     public interface ICalculationReceiver
     {
-        void Process();
+        void Process(List<Domain.SKUQuantity> unProcessedItems);
     }
 }

@@ -8,6 +8,6 @@ namespace PromotionEngine.Core
     {
         public List<SKUQuantity> Items { get; set; }
 
-        protected int Total { get; set; }
+        public int Total { get; set; }
     }
 }

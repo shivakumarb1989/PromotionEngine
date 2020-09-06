@@ -9,13 +9,14 @@ namespace PromotionEngine.Core
 {
     public class CalculationHandler
     {
-        private List<SKUQuantity> Items { get; set; }
+        private List<SKUQuantity> UnProcessedItems { get; set; }
 
-        public CalculationHandler(List<SKUQuantity> unProcessedItems, List<ICalculationReceiver> receivers)
+        public CalculationHandler(List<SKUQuantity> items, List<ICalculationReceiver> receivers)
         {
+            UnProcessedItems = items;
             foreach (var calculation in receivers)
             {
-                calculation.Process();
+                calculation.Process(UnProcessedItems);
             }
         }
     }

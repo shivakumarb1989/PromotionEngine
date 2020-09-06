@@ -7,7 +7,7 @@ namespace PromotionEngine.Core.Promotions
 {
     public class PromotionA : ICalculationReceiver
     {
-        public void Process()
+        public void Process(List<Domain.SKUQuantity> unProcessedItems)
         {
             throw new NotImplementedException();
         }
